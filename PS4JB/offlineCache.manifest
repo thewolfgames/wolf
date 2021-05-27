@@ -1,6 +1,6 @@
-CACHE MANIFEST 
-# v1.0 : 16-03-2021: 
-
+CACHE MANIFEST
+# v1.0 : 16-03-2021
+ 
 app2usb.js
 backup.js
 disableupdates.js
@@ -38,7 +38,7 @@ loader.js
 mira750.js
 mira751.js
 mira755.js
-offlineCache.manifest
+offlinexmb.cache
 oldjb.js
 payload.js
 preloader.js
