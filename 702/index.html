@@ -1,4 +1,6 @@
-<html manifest="wolf.manifest"><body style="background-color:#030402;color:white;font-size:15px;text-align:center;"><h1 style='font-size:50px;margin:0;'>THE WOLF GAMES 7.02</h1>
+<html manifest="wolf.manifest">
+<body style="background-color:#030402;color:white;font-size:15px;text-align:center;">
+<h1 style='font-size:50px;margin:0;'>THE WOLF GAMES 7.02</h1>
 	<style>
 		.button {  
 		  border-radius: 5px;
@@ -81,12 +83,12 @@
 			window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
 			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";localStorage.is702dCached=true;setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page to Run the Exploit!!"; }, 1500);};
 		</script>
-		<script src="utils.js"></script>
-		<script src="int64.js"></script>
-		<script src="rop.js"></script>
-		<script src="payloads.js"></script>
-		<script src="userland.js"></script>
-		<script src="ps4.js"></script>
+		<script src="./utils.js"></script>
+		<script src="./int64.js"></script>
+		<script src="./rop.js"></script>
+		<script src="./payloads.js"></script>
+		<script src="./userland.js"></script>
+		<script src="./ps4.js"></script>
 		<script>
 			var width = 0;
 			function frame1() {
