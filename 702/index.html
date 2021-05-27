@@ -1,0 +1,121 @@
+<html manifest="wolf.manifest"><body style="background-color:#030402;color:white;font-size:15px;text-align:center;"><h1 style='font-size:50px;margin:0;'>THE WOLF GAMES 7.02</h1>
+	<style>
+		.button {  
+		  border-radius: 5px;
+		  color: white;
+		  padding: .5em;
+		  text-decoration: none;
+		  height:100%;
+		  display:inline-table;
+		  font-family: system-ui;
+		}
+
+		.button:focus,
+		.button:hover {
+		  color: White;
+		}
+
+		.titlehead {
+		  border-radius: 5px;
+		  color: white;
+		  padding: .5em;
+		  text-decoration: none;
+		  text-align: center;
+		  margin-top: 80px;
+		  margin-bottom: 0px;
+		  font-family: system-ui;
+		}
+
+		.titlehead:focus,
+		.titlehead:hover {
+		  color: White;
+		}
+
+		.bg {
+		  /* The image used */
+		  background-image: url("");
+		  font-family: system-ui;
+		  /* Center and scale the image nicely */
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+
+		#myProgress {
+		  border: 5px solid #FFFFFF;
+		  border-radius: 5px;
+		  background-color: #ddd;
+		  height: 45px;
+		  position: absolute;
+		  top:0;
+		  bottom: 70;
+		  left: 150;
+		  right: 150;
+		  margin: auto;
+		}
+
+		#myBar {
+		  width: 0%;
+		  height: 40px;
+		  background-color: #f70519;
+		  text-align: center;
+		  line-height: 30px;
+		  color: white;
+		  font-size: 35px;
+		  padding-top: 5px;
+		}
+
+		img:hover {transform: scale(1.2);/* (100% zoom - Note: if the zoom is too large, it will go outside of the viewport) */}
+        .center {
+		 display: block;
+		 margin-left: auto;
+		 margin-right: auto;
+        }
+	</style>
+<head>
+<meta charset="utf-8">
+<title>THE WOLF Auto exploit for 7.02 FW</title>
+		<script>
+		    if(window.applicationCache.status==2){localStorage.is702dCached=true;}
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";localStorage.is702dCached=false;};
+			window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";localStorage.is702dCached=true;setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page to Run the Exploit!!"; }, 1500);};
+		</script>
+		<script src="utils.js"></script>
+		<script src="int64.js"></script>
+		<script src="rop.js"></script>
+		<script src="payloads.js"></script>
+		<script src="userland.js"></script>
+		<script src="ps4.js"></script>
+		<script>
+			var width = 0;
+			function frame1() {
+				var elem = document.getElementById("myBar");
+				var i=0;
+				var id = setInterval(fra, 10);
+				function fra(){
+				  if(i<10 && width<100){
+					  width++;
+					  elem.style.width = width + "%";
+					  elem.innerHTML = width  + "%";
+				  } i++;
+				}
+			}
+		</script>
+</head>
+<body onload="go();" class="bg">
+<h1 id="progress" class="titlehead">Loading... Please Wait !!</h1>
+        <input type="hidden" id="pldooe" value=""/><input type="hidden" id="pldooe_full" value=""/>
+		<button style="opacity:0" id="input1" onfocus="handle2()"></button>
+		<button style="opacity:0" id="input2"></button>
+		<button style="opacity:0" id="input3" onfocus="handle2()"></button>
+		<select style="opacity:0" id="select1">
+			<option value="value1">Value1</option>
+		</select>
+		<h1 id="myProgress">
+		  <div id="myBar">0%</div>
+		</h1>
+		<table id="load" align="center" style="margin-top:0px;">
+		</table>
+</body>
+</html>
