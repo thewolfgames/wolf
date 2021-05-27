@@ -1,7 +1,6 @@
 CACHE MANIFEST 
-#v4 Thu 05/27/2021 
+# Thu 05/27/2021-23:26:55.94 
 
-1jb.js
 app2usb.js
 backup.js
 disableupdates.js
@@ -39,6 +38,7 @@ loader.js
 mira750.js
 mira751.js
 mira755.js
+offlineCache.manifest
 oldjb.js
 payload.js
 preloader.js
