@@ -1,5 +1,5 @@
 CACHE MANIFEST 
-# Thu 05/27/2021-23:26:55.94 
+# Fri 05/28/2021- 9:34:41.51 
 
 app2usb.js
 backup.js
@@ -38,7 +38,6 @@ loader.js
 mira750.js
 mira751.js
 mira755.js
-offlineCache.manifest
 oldjb.js
 payload.js
 preloader.js
