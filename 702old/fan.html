@@ -1,13 +1,8 @@
 <html><head>
     <body style="background-color:#030402;color:white;font-size:25px;text-align:center;">
 	<h1 style='font-size:50px;margin:0;'>THE WOLF GAMES 7.02</h1><br><br>
-	<h1 style='font-size:35px;margin:0;'>APP TO USB</h1><br>
-		<title>THE WOLF HACK 7.02</title>	
+	<h1 style='font-size:35px;margin:0;'>FAN SPEED</h1><br>
 <body onload="go()">
-<script>
-if(document.cookie.indexOf('kex=0') >= 0)
-    document.location.href = 'index.html';
-</script>
 <script>
 function print(){}
 
@@ -41,8 +36,8 @@ window.midExploit = function()
 
 window.postExploit = function()
 {
-    document.cookie = 'kex=0';
-    setTimeout(function() //update the screen one last time...
+    history.pushState({}, '', 'index.html');
+    setTimeout(function()
     {
         eval.call(window, scriptCode);
         done();
