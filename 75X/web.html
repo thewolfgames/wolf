@@ -1,15 +1,8 @@
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>THE WOLF GAMES 7.55</title>
-</head> 
 <body style="background-color:#030402;color:white;font-size:25px;text-align:center;">
 <h1 style='font-size:50px;margin:0;'>THE WOLF GAMES 7.55</h1>
+<head>
 <br><br><br><br>
-<script>
-if(document.cookie.indexOf('kex=0') >= 0)
-    document.location.href = 'index.html';
-</script>
 <body onload="go()">
 <script>
 function print(){}
@@ -41,22 +34,22 @@ function done()
 window.midExploit = function()
 {
         var s = decodeURIComponent(document.location.hash.substr(3));
-        preloadScripts(['blob.js', 'jb.js', 'mira/mira.js', 'web.js', 'netcat.js', 'frontend.js'], go);
+        preloadScripts(['blob.js', 'jb.js', 'preloader.js', 'web.js', 'netcat.js', 'frontend.js'], go);
 }
 
 window.postExploit = function()
 {
-    document.cookie = 'kex=0';
-    setTimeout(function() //update the screen one last time...
+    history.pushState({}, '', 'index.html');
+    setTimeout(function() 
     {
         eval.call(window, scriptCode);
         done();
     }, 100);
 };
 </script>
-<script src="./utils.js"></script>
-<script src="./int64.js"></script>
-<script src="./ps4.js"></script>
+<script src="webkit/utils.js"></script>
+<script src="webkit/int64.js"></script>
+<script src="webkit/ps4.js"></script>
 <button id="input1" onfocus="handle2()"></button>
 <button id="input2"></button>
 <button id="input3" onfocus="handle2()"></button>

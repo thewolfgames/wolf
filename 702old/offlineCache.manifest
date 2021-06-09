@@ -1,5 +1,5 @@
 CACHE MANIFEST 
-# Mon 05/31/2021-23:20:12.31 
+# Sat 06/05/2021-22:32:00.00 
 
 Activator.html
 app2usb.html
@@ -61,6 +61,8 @@ linuxloader1.html
 linuxloader3.html
 loader.js
 mira2b.js
+Orbis-Toolbox-702.html
+Orbis-Toolbox-702.js
 payload.js
 ps4.js
 ps4debug.html

@@ -1,10 +1,7 @@
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>THE WOLF GAMES 7.55</title>
-</head> 
 <body style="background-color:#030402;color:white;font-size:25px;text-align:center;">
-<h1 style='font-size:50px;margin:0;'>THE WOLF GAMES 7.55</h1>
+<h1 style='font-size:50px;margin:0;'>THE WOLF GAMES 7.5X</h1>
+</head> 
 <br><br><br><br>
 <body onload="go()">
 <script>
@@ -50,7 +47,7 @@ function done()
 window.midExploit = function()
 {
     var params = getHashParams();
-    var scripts = ['blob.js', 'jb.js'];
+    var scripts = ['blob.js'];
     if('p0' in params)
         scripts.push(params.p0);
     if('p1' in params)
@@ -62,19 +59,21 @@ window.midExploit = function()
 window.postExploit = function()
 {
     history.pushState({}, '', 'index.html');
-    setTimeout(function() //update the screen one last time...
+    setTimeout(function().
     {
         eval.call(window, scriptCode);
         done();
     }, 100);
 };
 </script>
-<script src="./webkit-7.50/external/utils.js"></script>
-<script src="./webkit-7.50/external/int64.js"></script>
-<script src="./webkit-7.50/external/ps4.js"></script>
-<button style=opacity:0 id="input1" onfocus="handle2()"></button>
-<button style=opacity:0 id="input2"></button>
-<button style=opacity:0 id="input3" onfocus="handle2()"></button>
-<select style=opacity:0 id="select1"><option value="value1">Value1</option></select>
+<script src="webkit/utils.js"></script>
+<script src="webkit/int64.js"></script>
+<script src="webkit/ps4.js"></script>
+<button id="input1" onfocus="handle2()"></button>
+<button id="input2"></button>
+<button id="input3" onfocus="handle2()"></button>
+<select id="select1">
+<option value="value1">Value1</option>
+</select>
 </body>
 </html>
